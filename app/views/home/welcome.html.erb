@@ -1,0 +1,12 @@
+<% content_for :title do "Welcome" %> 
+<% end %>
+
+<% content_for :javascript_includes do %>
+    <%= javascript_pack_tag 'welcomeIndex' %>
+<% end %>
+
+<% content_for :content do %>
+    <%= content_tag "div",
+                    id: "welcome-index" do %>
+    <% end %>
+<% end %>

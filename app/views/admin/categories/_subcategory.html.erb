@@ -1,0 +1,10 @@
+<ul>
+<% subcategories.each do |sub| %>
+<li>
+<%= sub.name %> <%= link_to "Edit", edit_admin_category_path(sub), :class => "btn btn-primary btn-xs" %>
+<%= link_to "show", admin_category_path(sub), :class => "btn btn-primary btn-xs" %> 
+<br />
+<%= render partial: 'subcategory', locals: {subcategories: sub.children} if sub.children.present? %>
+</li>
+<% end %>
+</ul>
