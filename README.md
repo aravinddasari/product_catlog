@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This Application is all about the Product catlog for an E-commerce Site.
+Will Have Products And categories Associated with Many to Many relation and Categories further divided into Sub-cat , sub-sub-cat and so on
 
-Things you may want to cover:
 
-* Ruby version
+For Category model , we used ancestry gem for tree structure.
 
-* System dependencies
 
-* Configuration
+Run migrations and start the server and hit http://localhost:3000
 
-* Database creation
 
-* Database initialization
+For Admin Routes, http://localhost:3000/admin/products
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+http://localhost:3000/admin/categories

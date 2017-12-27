@@ -72,15 +72,12 @@ export default class ShowView extends React.Component {
 
   renderEachSub(category) {
     const rowHtml = [];
-    let index;
-    for(index = 0 ;index < category["children"].length; index++) {
       rowHtml.push(
         <div>
-        {category["children"][index]["name"]}
-        <Checkbox value ={category["children"][index]["id"]} name={category["children"][index]["name"]} />
+        {category["name"]}
+        <Checkbox value ={category["id"]} name={category["name"]} />
         </div>
       );
-    }
     return rowHtml;
   }
   renderSubCategories() { //rendering upto level 1 of sub_categories
@@ -91,7 +88,6 @@ export default class ShowView extends React.Component {
       if (this.state.sub_categories.length > 0) {
         filterHtml.push(
           <div id={i} key={i} className="m-t-15 m-b-15">
-          {this.state.sub_categories[i]["name"]}
               <CheckboxGroup name={this.state.sub_categories[i]["name"]} value={this.state.sub_filters} onChange={this.handleSubFilterChange}>
               {this.renderEachSub(this.state.sub_categories[i])}
               </CheckboxGroup>

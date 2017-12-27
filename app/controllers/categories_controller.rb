@@ -31,7 +31,7 @@ class CategoriesController < ApplicationController
       all_cat = []
       if params["filter"].present?
         category = Category.find(params["filter"])
-        all_cat = category.subtree.joins(:products).arrange_serializable
+        all_cat = category.subtree.joins(:products).uniq
       end
       render json: {sub_categories: all_cat }
   end
